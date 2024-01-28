@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RevitAddIns>
+	<AddIn Type="Application">
+	<Name>UploadVorToDb</Name>
+	<Assembly>UploadVorToDb.dll</Assembly>
+	<AddInId>F4822DB6-8CE5-492E-B67E-96A94BD37995</AddInId>
+	<FullClassName>UploadVorToDb.Application</FullClassName>
+	<VendorId>VendorId</VendorId>
+	<VendorDescription></VendorDescription>
+	</AddIn>
+</RevitAddIns>

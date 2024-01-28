@@ -1,0 +1,50 @@
+﻿<Window x:Class="UploadVorToDb.UI.Views.SelectExportTypeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:local="clr-namespace:UploadVorToDb.UI.Views"
+        mc:Ignorable="d" 
+        Title="Экспорт в базу данных"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Height="140" 
+        Width="250">
+    <Window.Resources>
+        <Style TargetType="RadioButton">
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="GroupName" Value="UploadTypes"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Button Content="Ок"
+                Width="75"
+                Grid.Row="1" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center" 
+                Click="Button_Click" />
+        <StackPanel Grid.Row="0"
+                    Grid.Column="0"
+                    VerticalAlignment="Center"
+                    Margin="20,0">
+            
+            <TextBlock TextWrapping="Wrap" 
+                       Padding="5"
+                       Text="Тип выгрузки"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"/>
+            <RadioButton x:Name="RadBtnNew" 
+                         Content="Новое задание" 
+                         Checked="RadBtnNew_Checked"/>
+            <RadioButton x:Name="RadBtnOld" 
+                         Content="Добавить в последнее"
+                         Checked="RadBtnOld_Checked"/>
+
+        </StackPanel>
+    </Grid>
+</Window>
